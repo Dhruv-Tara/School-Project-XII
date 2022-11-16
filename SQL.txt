@@ -1,0 +1,33 @@
+mysql> create database city;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use city;
+Database changed
+mysql> create table Nashik(pin BIGINT PRIMARY KEY NOT NULL,name varchar(30),area BIGINT ,population BIGINT,water BIGINT,elec BIGINT,from_date date,last_updated date);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc Nashik;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| pin          | bigint      | NO   | PRI | NULL    |       |
+| name         | varchar(30) | YES  |     | NULL    |       |
+| area         | bigint      | YES  |     | NULL    |       |
+| population   | bigint      | YES  |     | NULL    |       |
+| water        | bigint      | YES  |     | NULL    |       |
+| elec         | bigint      | YES  |     | NULL    |       |
+| from_date    | date        | YES  |     | NULL    |       |
+| last_updated | date        | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+8 rows in set (0.01 sec)
+
+mysql> Insert into nashik values(422003,'Adgaon',15,30000,300,200,'2022-11-07','2022-11-10');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from nashik;
++--------+--------+------+------------+-------+------+------------+--------------+
+| pin    | name   | area | population | water | elec | from_date  | last_updated |
++--------+--------+------+------------+-------+------+------------+--------------+
+| 422003 | Adgaon |   15 |      30000 |   300 |  200 | 2022-11-07 | 2022-11-10   |
++--------+--------+------+------------+-------+------+------------+--------------+
+1 row in set (0.00 sec)
