@@ -167,7 +167,7 @@ if x == "Yash" and y == "123456":
             for x in myc.fetchall():
                 name = x[0]
                 water = x[1]
-            NEW = float(input("Enter new Water Usage for {} old is {} L : "))
+            NEW = float(input("Enter new Water Usage for {} old is {} L : ".format(name,water)))
             query_ = "update nashik set water = {} where pin = {}".format(NEW,pin)
             myc.execute(query_)
             DB.commit()
